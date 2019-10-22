@@ -27,6 +27,12 @@
         android:layout="@layout/settings_entity_header"
         android:selectable="false"/>
 
+    <!-- WelcomeOS logo -->
+    <PreferenceScreen
+        android:layout="@layout/logo"
+        android:key="logo"
+        android:selectable="false" />
+
     <!-- Device name -->
     <com.android.settings.widget.ValidatedEditTextPreference
         android:key="device_name"

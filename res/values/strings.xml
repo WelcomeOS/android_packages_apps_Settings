@@ -10087,4 +10087,7 @@
 
     <!-- Title for Connected device shortcut [CHAR LIMIT=30] -->
     <string name="devices_title">Devices</string>
+
+    <!-- WelcomeOS logo -->
+    <string name="welcomeos_title" translatable="false">Welcome OS</string>
 </resources>
