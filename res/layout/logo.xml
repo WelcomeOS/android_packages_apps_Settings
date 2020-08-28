@@ -52,7 +52,7 @@
         android:singleLine="true"
         android:text="@string/welcomeos_description"
         android:textColor="?android:attr/textColorPrimary"
-        android:textSize="24sp"
+        android:textSize="12sp"
         android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
         android:ellipsize="marquee"
         android:fadingEdge="horizontal" />

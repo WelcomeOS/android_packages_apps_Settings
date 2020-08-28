@@ -10091,6 +10091,9 @@
     <!-- WelcomeOS logo -->
     <string name="welcomeos_title" translatable="false">Welcome OS</string>
 
+    <!-- WelcomeOS description -->
+    <string name="welcomeos_description" translatable="false">Welcome to hell.</string>
+
     <!-- Fake BesAudEnh -->
     <string name="besaudenh_title" translatable="false">BesAudEnh</string>
 
