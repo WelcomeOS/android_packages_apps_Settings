@@ -17,6 +17,7 @@
 package com.android.settings.deviceinfo;
 
 import android.app.AlertDialog;
+import android.app.ActivityManager.MemoryInfo;
 import android.app.Dialog;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,6 +27,12 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -67,6 +74,33 @@ public class HardwareInfoDialogFragment extends InstrumentedDialogFragment {
         // Hardware rev
         setText(content, R.id.hardware_rev_label, R.id.hardware_rev_value,
                 SystemProperties.get("ro.boot.hardware.revision"));
+
+        // Total RAM
+        if (SystemProperties.get("ro.welcome.fake.ram").toString().equals("")) {
+            MemoryInfo mi = new MemoryInfo();
+            ActivityManager activityManager = (ActivityManager)getActivity().getSystemService(Context.ACTIVITY_SERVICE);
+            activityManager.getMemoryInfo(mi);
+            long availableMegs = mi.availMem / 1048576L;
+            setText(content, R.id.ram_total_title, R.id.ram_total_value,
+                String.valueOf(availableMegs).concat("MB"));
+        }
+        else {
+            setText(content, R.id.ram_total_title, R.id.ram_total_value,
+                SystemProperties.get("ro.welcome.fake.ram"));
+        }
+
+        // CPU Cores
+        if (SystemProperties.get("ro.welcome.fake.cpu_cores").toString().equals("")) {
+            File dir = new File("/sys/devices/system/cpu/");
+            File[] files = dir.listFiles(new CpuFilter());
+            int numberOfFiles = dir.length;
+            setText(content, R.id.cpu_cores_title, R.id.cpu_cores_value,
+                String.valueOf(numberOfFiles));
+        }
+        else {
+            setText(content, R.id.cpu_cores_title, R.id.cpu_cores_value,
+                SystemProperties.get("ro.welcome.fake.cpu_cores"));
+        }
 
         return builder.setView(content).create();
     }
