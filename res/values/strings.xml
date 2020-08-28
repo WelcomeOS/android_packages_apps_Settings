@@ -10096,10 +10096,4 @@
 
     <!-- Fake BesLoudness -->
     <string name="besloudness_title" translatable="false">BesLoudness</string>
-
-    <!-- Total RAM -->
-    <string name="ram_total">Total RAM</string>
-
-    <!-- Total CPU Cores -->
-    <string name="cpu_core_count">CPU Cores</string>
 </resources>

@@ -61,31 +61,5 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <!-- Total RAM -->
-        <TextView
-            style="@style/device_info_dialog_label"
-            android:id="@+id/ram_total_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ram_total"/>
-        <TextView
-            style="@style/device_info_dialog_value"
-            android:id="@+id/ram_total_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <!-- Total CPU Cores -->
-        <TextView
-            style="@style/device_info_dialog_label"
-            android:id="@+id/cpu_cores_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cpu_core_count"/>
-        <TextView
-            style="@style/device_info_dialog_value"
-            android:id="@+id/cpu_cores_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
     </LinearLayout>
 </ScrollView>

@@ -123,7 +123,7 @@
         settings:keywords="@string/keywords_android_version"
         android:summary="@string/summary_placeholder"/>
 
-    <!-- IP address -->
+    <!--IP address -->
     <Preference
         android:key="wifi_ip_address"
         android:order="34"
