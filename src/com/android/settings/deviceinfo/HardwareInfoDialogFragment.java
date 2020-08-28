@@ -57,7 +57,12 @@ public class HardwareInfoDialogFragment extends InstrumentedDialogFragment {
                 DeviceModelPreferenceController.getDeviceModel());
 
         // Serial number
-        setText(content, R.id.serial_number_label, R.id.serial_number_value, getSerialNumber());
+        if (SystemProperties.get("ro.welcome.custom.serial").toString().equals("")) {
+            setText(content, R.id.serial_number_label, R.id.serial_number_value, getSerialNumber());
+        }
+        else {
+            setText(content, R.id.serial_number_label, R.id.serial_number_value, SystemProperties.get("ro.welcome.custom.serial"));
+        }
 
         // Hardware rev
         setText(content, R.id.hardware_rev_label, R.id.hardware_rev_value,
