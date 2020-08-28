@@ -10090,4 +10090,10 @@
 
     <!-- WelcomeOS logo -->
     <string name="welcomeos_title" translatable="false">Welcome OS</string>
+
+    <!-- Fake BesAudEnh -->
+    <string name="besaudenh_title" translatable="false">BesAudEnh</string>
+
+    <!-- Fake BesLoudness -->
+    <string name="besloudness_title" translatable="false">BesLoudness</string>
 </resources>
