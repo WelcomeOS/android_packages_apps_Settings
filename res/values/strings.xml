@@ -10090,4 +10090,7 @@
 
     <!-- WelcomeOS logo -->
     <string name="welcomeos_title" translatable="false">Welcome OS</string>
+
+    <!-- Sound enhancements -->
+    <string name="sound_enhancements" translatable="false">Sound enhancements</string>
 </resources>

@@ -67,4 +67,9 @@
             android:title="@string/emergency_tone_title"
             android:summary="%s" />
 
+    <!-- Sound enhancements -->
+     <Preference
+            android:key="sound_enhancements"
+            android:title="@string/sound_enhancements" />
+
 </PreferenceScreen>
