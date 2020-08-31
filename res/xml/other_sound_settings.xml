@@ -67,14 +67,4 @@
             android:title="@string/emergency_tone_title"
             android:summary="%s" />
 
-    <!-- Fake BesAudEnh -->
-    <SwitchPreference
-            android:key="besaudenh"
-            android:title="@string/besaudenh_title" />
-
-    <!-- Fake BesLoudness -->
-    <SwitchPreference
-            android:key="besloudness"
-            android:title="@string/besloudness_title" />
-
 </PreferenceScreen>
