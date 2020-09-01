@@ -10088,9 +10088,15 @@
     <!-- Title for Connected device shortcut [CHAR LIMIT=30] -->
     <string name="devices_title">Devices</string>
 
-    <!-- WelcomeOS logo -->
+    <!-- WelcomeOS -->
     <string name="welcomeos_title" translatable="false">Welcome OS</string>
+
+    <!-- WelcomeOS version -->
+    <string name="welcomeos_version">WelcomeOS version</string>
 
     <!-- Sound enhancements -->
     <string name="sound_enhancements" translatable="false">Sound enhancements</string>
+
+    <!-- Custom build number -->
+    <string name="custom_build_number">Custom build number</string>
 </resources>
