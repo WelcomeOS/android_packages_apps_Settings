@@ -37,13 +37,7 @@ public class CustomBuildNumberDialogController {
      * Updates the build number to the dialog.
      */
     public void initialize() {
-        if (SystemProperties.get("ro.welcome.overlay.custom_build").toString().equals("")) {
-            mDialog.setText(CUSTOM_BUILD_NUMBER_VALUE_ID,
-                SystemProperties.get("ro.custom.build.version"));
-        }
-        else {
-            mDialog.setText(CUSTOM_BUILD_NUMBER_VALUE_ID,
-                SystemProperties.get("ro.welcome.overlay.custom_build"));
-        }
+        mDialog.setText(CUSTOM_BUILD_NUMBER_VALUE_ID,
+            SystemProperties.get("ro.custom.build.version"));
     }
 }
